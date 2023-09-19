@@ -67,18 +67,40 @@ class Snake(pygame.sprite.Sprite):
         new_head = Head()
         self.head = new_head
         self.direction = RIGHT
+        self.not_valid_direction = 4
 
     def update_direction(self, pressed_keys):
         if pressed_keys[K_UP] or pressed_keys[K_w]:
-            self.direction = K_UP - K_RIGHT
+            if K_UP - K_RIGHT != self.not_valid_direction:
+                self.direction = K_UP - K_RIGHT
+                if len(self.list):
+                    self.not_valid_direction = DOWN
         if pressed_keys[K_DOWN] or pressed_keys[K_s]:
-            self.direction = K_DOWN - K_RIGHT
+            if K_DOWN - K_RIGHT != self.not_valid_direction:
+                self.direction = K_DOWN - K_RIGHT
+                if len(self.list):
+                    self.not_valid_direction = UP
         if pressed_keys[K_LEFT] or pressed_keys[K_a]:
-            self.direction = K_LEFT - K_RIGHT
+            if K_LEFT - K_RIGHT != self.not_valid_direction:
+                self.direction = K_LEFT - K_RIGHT
+                if len(self.list):
+                    self.not_valid_direction = RIGHT
         if pressed_keys[K_RIGHT] or pressed_keys[K_d]:
-            self.direction = K_RIGHT - K_RIGHT
+            if K_RIGHT - K_RIGHT != self.not_valid_direction:
+                self.direction = K_RIGHT - K_RIGHT
+                if len(self.list):
+                    self.not_valid_direction = LEFT
 
     def add_block(self):
+        if len(self.list) == 0:
+            if self.direction == RIGHT:
+                self.not_valid_direction = LEFT
+            elif self.direction == LEFT:
+                self.not_valid_direction = RIGHT
+            elif self.direction == UP:
+                self.not_valid_direction = DOWN
+            elif self.direction == DOWN:
+                self.not_valid_direction = UP
         new_block = Blocks()
         self.list.append(new_block)
 

@@ -1,5 +1,5 @@
-#include <iostream>
 #include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
 /**
@@ -9,6 +9,6 @@ using namespace std;
  * to indicate that the program has completed successfully.
  */
 int main() {
-    cout << "Hello World" << endl;
-    return 0;
+  cout << "Hello World" << endl;
+  return 0;
 }

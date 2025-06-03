@@ -1,5 +1,63 @@
-# projects
+# Personal Projects Collection
 
-## List of current projets
-- Snake game
-- Brick breaker
+This repository contains various projects I've worked on in my free time for learning and entertainment purposes. Some are written in Python while others were created for educational purposes. Below is a guide for each project:
+
+## 1. Break Blocks
+A classic arcade-style block-breaking game. Control a paddle at the bottom of the screen to bounce a ball and break blocks. Test your reflexes and aim to clear all blocks!
+```bash
+python break_blocks.py
+```
+Controls:
+- Use left and right arrow keys to move the paddle
+- Press ESC key to exit the game
+
+## 2. Image Snapshot
+A real-time image capture tool that uses your computer's camera. Perfect for taking quick snapshots and testing computer vision applications.
+```bash
+python image_snapshot.py
+```
+Controls:
+- Camera feed will start automatically
+- Press ESC key to exit the program
+
+## 3. Snake Game
+Classic snake game where you control a snake that grows longer as it eats food. Navigate carefully to avoid collisions!
+```bash
+python snake_game.py
+```
+Controls:
+- Use arrow keys to control snake's direction
+- Press ESC key to exit the game
+- Game ends automatically if snake collides with itself
+
+## 4. STL Projects
+A utility for working with STL (STereoLithography) files, commonly used in 3D printing and CAD applications.
+```bash
+python stl_project.py
+```
+
+## 5. Tower of Hanoi
+An implementation of the classic Tower of Hanoi puzzle. Move a stack of disks from one rod to another, following specific rules:
+- Only one disk can be moved at a time
+- Each move consists of taking the upper disk from one stack and placing it on top of another stack
+- No larger disk may be placed on top of a smaller disk
+```bash
+python tower_of_hanoi.py
+```
+
+## Requirements
+- Python 3.x
+- Required libraries (install via pip):
+  - OpenCV (for Image Snapshot)
+  - Pygame (for Snake Game and Break Blocks)
+  - NumPy (for STL processing)
+
+## Setup
+1. Clone the repository
+2. Make sure Python is installed on your system
+3. Install required dependencies
+4. Navigate to the project directory
+5. Run the desired program using the commands listed above
+
+## Note
+All programs are interactive and will provide additional instructions during runtime.

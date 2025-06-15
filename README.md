@@ -45,12 +45,39 @@ An implementation of the classic Tower of Hanoi puzzle. Move a stack of disks fr
 python tower_of_hanoi.py
 ```
 
+## 6. Verilog Projects
+A collection of Verilog hardware description language projects including:
+- Full Adder implementation
+- Ripple Carry Adder
+- Sum and Carry logic
+- Example test implementations
+
+To run the simulations:
+```bash
+cd verilog
+./run_sim.sh <testbench_file>
+```
+Example usage:
+```bash
+./run_sim.sh full_adder_test.v    # Run full adder testbench
+./run_sim.sh ripple_adder_tb.v    # Run ripple adder testbench
+```
+
 ## Requirements
 - Python 3.x
 - Required libraries (install via pip):
   - OpenCV (for Image Snapshot)
   - Pygame (for Snake Game and Break Blocks)
   - NumPy (for STL processing)
+- For Verilog Projects:
+  - Icarus Verilog (iverilog) - Install with:
+    ```bash
+    brew install icarus-verilog
+    ```
+  - GTKWave - Install with:
+    ```bash
+    brew install --HEAD randomplum/gtkwave/gtkwave
+    ```
 
 ## Setup
 1. Clone the repository
